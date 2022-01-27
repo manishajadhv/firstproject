@@ -1,0 +1,41 @@
+<head>
+<meta charset=utf-8 />
+<title>Set the background color of a paragraph</title>
+</head>
+<body>
+<input type="button" value="Click to set paragraph background color" onclick="set_background()">
+<p  id="p1"> JavaScript Exercises</p>
+<p id="p2"> PHP Exercises</p> 
+<p id="p3"> JavaScript is more fun</p>
+</body>
+
+<script>
+
+function set_background() {
+var chnge_text = "Text changes  on onclick event";
+var chg = "font style changes on onclick event";
+
+ //docBody = document.getElementsByTagName("body")[0];
+  //Get all the p elements that are descendants of the body
+ // myBodyElements = docBody.getElementsByTagName("p");
+// get the first p elements
+  //myp1 = myBodyElements[0];
+ var myp1 = document.getElementById("p1");
+ 
+  myp1.style.background = "rgb(165,42,42)";
+ myp1.textContent = chnge_text;
+  // change the string content inside this p tag -- ?
+// get the second p elementsss
+  //myp2 = myBodyElements[1];
+var myp2 = document.getElementById("p2");
+  myp2.innerHTML = chg;
+  myp2.style.fontStyle = "italic";
+  myp2.style.background = "rgb(255,255,0)";
+  
+var myp3 = document.getElementById("p3");
+  myp3.style.background = "rgb(90, 135, 181)";
+}
+</script>
+
+</html>
+
