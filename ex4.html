@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<meta charset=utf-8/>
+		<title>Change the content of a cell</title>
+		<style type="text/css"> 
+body {margin: 30px;} 
+</style>
+	</head>
+	<body>
+		<table id="myTable" border="1">
+			<tr>
+				<td>Row1</td>
+				<td>cell1</td>
+                                <td>cell1</td>
+                                <td>cell1</td>
+			</tr>
+			<tr>
+				<td>Row1</td>
+				<td>cell1</td>
+                                <td>cell1</td>
+                                <td>cell1</td>
+			</tr>
+			<tr>
+				<td>Row1</td>
+				<td>cell1</td>
+                                <td>cell1</td>
+                                <td>cell1</td>
+			</tr>
+			<tr>
+				<td>Row1</td>
+				<td>cell1</td>
+                                <td>cell1</td>
+                                <td>cell1</td>
+			</tr>
+			
+		</table>
+		<form>
+			<input type="button" onclick="changeContent()" value="Change content"> 
+</form>
+			<script>
+function changeContent()
+{
+//var x=document.getElementById("mytable").value="divya";
+var table = document.getElementById("myTable");
+for (let i in table.rows) {
+   let row = table.rows[i]
+   
+   	for (let j in row.cells) {
+     		let col = row.cells[j]
+               col.innerHTML="divya"
+
+  
+}
+}
+
+}
+//Create 4X4 table and change all the cell with "Divya".
+</script>
+		</body>
+	</html>
