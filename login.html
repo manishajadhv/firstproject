@@ -1,0 +1,45 @@
+<html>
+<head> 
+<style type="text/css"> 
+body {margin: 30px;} 
+</style>  
+<meta charset=utf-8 /> 
+<title>Remove items from a dropdown list</title> 
+</head><body>
+
+<form name="loginform" onSubmit="return validateForm();" action="main.html" method="post">
+    <label>User name</label>
+    <input type="text" name="usr" placeholder="username"> 
+    <label>Password</label>
+    <input type="password" name="pword" placeholder="password">
+    <input type="submit" value="Login"/>
+</form>
+<span id="error"></span>
+
+<script>
+    function validateForm() {
+        var un = document.loginform.usr.value;
+        var pw = document.loginform.pword.value;
+        var username = "admin"; 
+        var password = "12345678";
+var msg = "Please enter username";
+var msg2 = "Login was unsuccessful, please check your username and password"
+var error = document.getElementById("error")
+		
+		if(un == ""){
+		  error.innerHTML = msg;
+error.style.color = "red";
+		  return false;
+		}
+        if ((un == username) && (pw == password)) {
+            return true;
+        }
+        else {
+            error.innerHTML = msg2;
+error.style.color = "red";
+            return false;
+        }
+  }
+</script>
+		</body>
+	</html>
